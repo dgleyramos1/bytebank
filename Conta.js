@@ -29,17 +29,14 @@ export class Conta{
  }
 
  depositar(valor){
-   if(valor <= 0)
-   {
+   if(valor <= 0){
        return;
    } 
    this._saldo += valor;           
  }
 
  tranferir(valor, conta){
-   
    const valorSacado = this.sacar(valor);
    conta.depositar(valorSacado);
-   
  }
 }
